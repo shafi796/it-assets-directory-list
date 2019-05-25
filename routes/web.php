@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * @author: shafi
+ * It assets Controler Resource Route
+ */
+
+Route::resource('itasset','ItassetsController');
