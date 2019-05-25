@@ -65,5 +65,13 @@ This application build with [Laravel 5.8](https://laravel.com/). Go to official 
 - [Server Requirements](https://laravel.com/docs/5.8/installation#server-requirements)
 - [Installing Laravel](https://laravel.com/docs/5.8/installation#installing-laravel)
 
+## Coding Style
+Laravel follows the PSR-0 and PSR-1 coding standards. In addition to these standards, the following coding standards should be followed:
+
+* The class namespace declaration must be on the same line as <?php.
+* A class' opening { must be on the same line as the class name.
+* Functions and control structures must use Allman style braces.
+* Indent with tabs, align with spaces.
+
 ## License
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
