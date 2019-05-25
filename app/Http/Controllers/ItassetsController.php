@@ -26,7 +26,7 @@ class ItassetsController extends Controller
      */
     public function create()
     {
-        //
+         return view('itassets.create');
     }
 
     /**
@@ -37,7 +37,19 @@ class ItassetsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $request->validate([
+            'label' => 'required',
+            'description' => 'required',
+            'type' => 'required',
+            'status' => 'required',
+            'purchase_date' => 'required',
+            'purchase_owner' => 'required',
+        ]);
+  
+        Itassets::create($request->all());
+   
+        return redirect()->route('itassets.index')
+                        ->with('success','it assets created successfully.');
     }
 
     /**
@@ -48,7 +60,7 @@ class ItassetsController extends Controller
      */
     public function show(Itassets $itassets)
     {
-        //
+        return view('itassets.show',compact('itassets'));
     }
 
     /**
@@ -59,7 +71,7 @@ class ItassetsController extends Controller
      */
     public function edit(Itassets $itassets)
     {
-        //
+         return view('itassets.edit',compact('itassets'));
     }
 
     /**
@@ -71,7 +83,15 @@ class ItassetsController extends Controller
      */
     public function update(Request $request, Itassets $itassets)
     {
-        //
+          $request->validate([
+            'label' => 'required',
+            'description' => 'required'
+        ]);
+  
+        $itassets->update($request->all());
+  
+        return redirect()->route('itassets.index')
+                        ->with('success','it assets updated successfully');
     }
 
     /**
@@ -82,6 +102,10 @@ class ItassetsController extends Controller
      */
     public function destroy(Itassets $itassets)
     {
-        //
+        $itassets->delete();
+  
+        return redirect()->route('itassets.index')
+                        ->with('success','it asset deleted successfully');
+    
     }
 }

@@ -28,14 +28,14 @@
         @foreach ($itassets as $itasset)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $itasset->name }}</td>
-            <td>{{ $itasset->detail }}</td>
+            <td>{{ $itasset->label }}</td>
+            <td>{{ $itasset->description }}</td>
             <td>
                 <form action="{{ route('itassets.destroy',$itasset->id) }}" method="POST">
    
                     <a class="btn btn-info" href="{{ route('itassets.show',$itasset->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('itassets.edit',$itasset->id) }}">Edit</a>
+                    <!-- <a class="btn btn-primary" href="{{ route('itassets.edit',$itasset->id) }}">Edit</a> -->
    
                     @csrf
                     @method('DELETE')

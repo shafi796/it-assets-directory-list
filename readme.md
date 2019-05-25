@@ -15,10 +15,23 @@ The following are the properties of an asset will have:
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+### Test environment setup 
+
+* Download mannualy or Clone this repository using below mentined command  
+~~~
+git clone https://github.com/shafi796/it-assets-directory-list.git
+~~~
+* Composer Dependencies & Packages updaate using this command
+~~~
+composer update
+~~~
+
+
 ### Update Database Configuration
 
 In second step, we will make database configuration for example database name, username, password etc for our crud application of laravel 5.8. So let's open .env file and fill all details like as bellow:
 
+.env
 ~~~
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -32,9 +45,19 @@ Now you have to run this migration by following command for creating tabele for 
 
 ~~~
 php artisan migrate
-
 ~~~
 
+### Run application
+
+~~~
+php artisan serve
+~~~
+
+Now you can open bellow URL on your browser:
+
+~~~
+http://localhost:8000/itassets
+~~~
 
 ## Built With
 This application build with [Laravel 5.8](https://laravel.com/). Go to official website getting complete [documentation](https://laravel.com/docs/5.8)
