@@ -20,4 +20,4 @@ Route::get('/', function () {
  * It assets Controler Resource Route
  */
 
-Route::resource('itasset','ItassetsController');
+Route::resource('itassets','ItassetsController');

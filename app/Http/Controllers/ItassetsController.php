@@ -14,7 +14,9 @@ class ItassetsController extends Controller
      */
     public function index()
     {
-        //
+        $itassets  = Itassets::latest()->paginate(5);
+        return view('itassets.index',compact('itassets'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

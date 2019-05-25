@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatItAssetsDirectoryTable extends Migration
+class CreatItassetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatItAssetsDirectoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('it-assets-directory', function (Blueprint $table) {
+        Schema::create('itassets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('label');
             $table->text('description');
@@ -32,6 +32,6 @@ class CreatItAssetsDirectoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('it-assets-directory');
+        Schema::dropIfExists('itassets');
     }
 }
