@@ -28,6 +28,13 @@ DB_USERNAME=root
 DB_PASSWORD=
 ~~~
 
+Now you have to run this migration by following command for creating tabele for listing  it assets:
+
+~~~
+php artisan migrate
+
+~~~
+
 
 ## Built With
 This application build with [Laravel 5.8](https://laravel.com/). Go to official website getting complete [documentation](https://laravel.com/docs/5.8)
