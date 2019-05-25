@@ -21,8 +21,8 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Name</th>
-            <th>Details</th>
+            <th>Label</th>
+            <th>Description</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($itassets as $itasset)
